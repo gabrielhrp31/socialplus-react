@@ -1,18 +1,20 @@
 
 export const light = {
     background: '#EBF4F8',
-    titles: '#2C2738',
-    text: '#2C2738',
+    titles: '#000000',
+    text: '#000000',
     accentText: '#FFFFFF',
-    accent: '#1a237e',
+    accent: '#16c426',
+    softAccent: '#48c558',
 }
 
 export const dark = {
     background: '#1C2025',
-    titles: '#D6E1DF',
-    text: '#D6E1DF',
-    accentText: '#FFFFFF',
-    accent: '#1a237e',
+    titles: '#f2f2f2',
+    text: '#f2f2f2',
+    accentText: '#000000',
+    accent: '#16c426',
+    softAccent: '#48c558',
 }
 
 
