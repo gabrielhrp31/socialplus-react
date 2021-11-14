@@ -3,6 +3,7 @@ import {LogoButton, NavbarWrapper, ThemeButton} from "./styles";
 import {FaMoon, FaSun} from "react-icons/all";
 import {CustomThemeContext} from "../CustomThemeProvider";
 import Container from "../Container";
+import NavigationTabs from "../NavigationTabs";
 
 function Navbar(props) {
     const {currentTheme, setTheme} = useContext(CustomThemeContext);
@@ -10,9 +11,10 @@ function Navbar(props) {
     return (
         <NavbarWrapper>
             <Container>
-                <LogoButton>
+                <LogoButton to="/">
                     Social+
                 </LogoButton>
+                <NavigationTabs top/>
                 <ThemeButton>
                     {
                         currentTheme === 'light' &&

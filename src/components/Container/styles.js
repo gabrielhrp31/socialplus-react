@@ -2,9 +2,9 @@ import styled from "styled-components";
 
 export const StyledContainer = styled.div`
   width: 100%;
+  height: 100%;
+
   display: flex;
-  padding-left: 15px;
-  padding-right: 15px;
 
   @media (min-width: 1904px) {
     max-width: 1785px;
