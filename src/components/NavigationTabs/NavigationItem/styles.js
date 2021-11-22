@@ -10,7 +10,9 @@ export const NavigationItemWrapper = styled(Link)`
   align-items: center;
   justify-content: center;
 
-  border-bottom: ${({to}) => window.location.pathname === to ? '1px solid white' : 'none'};
+  border-bottom: ${({theme, to}) => window.location.pathname === to ? `3px solid ${theme.inverse}` : 'none'};
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
   color: ${({theme}) => theme.textAccent};
 
   font-size: 28px;

@@ -13,6 +13,13 @@ export const NavbarWrapper = styled.div`
   align-items: center;
   justify-content: space-evenly;
 
+  box-shadow: ${props =>
+          `0px 1px 5px rgba(0, 0, 0, ${
+                  props.scrollPos >= 64
+                          ? `0.25`
+                          : 0.0125 * props.scrollPos
+          })`};
+
   > div {
     display: flex;
     align-items: center;

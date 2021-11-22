@@ -13,6 +13,7 @@ function App() {
                     <Route path="/" element={<Home/>}/>
                     <Route path="/friends" element={<Home/>}/>
                     <Route path="/user/:id" element={<Home/>}/>
+                    <Route path="/profile" element={<Home/>}/>
                 </Routes>
             </CustomThemeProvider>
         </>

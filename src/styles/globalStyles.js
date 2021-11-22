@@ -1,8 +1,15 @@
 // styles/globalStyles.js
 import {createGlobalStyle} from 'styled-components'
+import OutfitFont from '../assets/fonts/OutfitFont.ttf';
 
 export default createGlobalStyle`
-  * {
+
+  @font-face {
+    font-family: 'OutfitFont';
+    src: local('OutfitFont'), url(${OutfitFont}) format('truetype');
+  }
+
+  *, a, button {
     box-sizing: border-box;
     margin: 0;
     outline: 0;
@@ -10,6 +17,7 @@ export default createGlobalStyle`
     background-color: unset;
     border: none;
     outline: none;
+    font-family: 'OutfitFont', sans-serif;
   }
 
   body {

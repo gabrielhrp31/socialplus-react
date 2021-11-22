@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {LogoButton, NavbarWrapper, ThemeButton} from "./styles";
 import {FaMoon, FaSun} from "react-icons/all";
 import {CustomThemeContext} from "../CustomThemeProvider";
@@ -7,9 +7,22 @@ import NavigationTabs from "../NavigationTabs";
 
 function Navbar(props) {
     const {currentTheme, setTheme} = useContext(CustomThemeContext);
+    const [scrollPos, setScrollPos] = useState(0);
+
+    useEffect(() => {
+        window.addEventListener("scroll", updateScroll);
+        return () => {
+            window.removeEventListener("scroll", updateScroll);
+        };
+    }, []);
+
+
+    const updateScroll = () => {
+        setScrollPos(document.documentElement.scrollTop);
+    };
 
     return (
-        <NavbarWrapper>
+        <NavbarWrapper scrollPos={scrollPos}>
             <Container>
                 <LogoButton to="/">
                     Social+
