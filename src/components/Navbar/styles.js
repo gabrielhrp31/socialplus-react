@@ -13,12 +13,12 @@ export const NavbarWrapper = styled.div`
   align-items: center;
   justify-content: space-evenly;
 
-  box-shadow: ${props =>
-          `0px 1px 5px rgba(0, 0, 0, ${
-                  props.scrollPos >= 64
-                          ? `0.25`
-                          : 0.0125 * props.scrollPos
-          })`};
+  box-shadow: ${
+          props => props.scrollPos >= 64 ?
+                  '0px 1px 5px rgba(0, 0, 0,0.25) '
+                  :
+                  '0 0 0 0 rgba(0,0,0,.2),0 0 0 0 rgba(0,0,0,.14),0 0 0 0 rgba(0,0,0,.12)'
+  };
 
   > div {
     display: flex;
@@ -63,6 +63,8 @@ export const LogoButton = styled(Link)`
   }
 
   &:hover {
+    color: ${({theme}) => theme.inverse};
+
     &::before {
       opacity: 0.25;
       background-color: ${({theme}) => theme.dark ? 'black' : 'white'};
